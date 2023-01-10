@@ -14,6 +14,12 @@
   outline: none;
 }
 
+@media screen and (min-width: 768px) {
+  .tab-btn {
+    font-size: 28px;
+  }
+}
+
 .active-tab-btn {
   color: #fec653;
   border-bottom: 2px solid #fec653;
