@@ -6,7 +6,7 @@ import NavBar from '../NavBar'
 
 const initialState = {
   score: 0,
-  seconds: 10,
+  seconds: 60,
   isGameOver: false,
 }
 
@@ -20,6 +20,7 @@ class Matchgame extends Component {
 
   restartGame = () => {
     this.setState(initialState)
+    this.startTimer()
   }
 
   clearTimerInterval = () => {
