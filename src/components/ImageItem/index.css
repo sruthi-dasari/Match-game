@@ -13,3 +13,18 @@
   height: 80px;
   width: 80px;
 }
+
+@media screen and (min-width: 768px) {
+  .image-item-container {
+    margin: 10px;
+  }
+
+  .image-btn {
+    padding: 0px;
+  }
+
+  .thumbnail-img {
+    height: 130px;
+    width: 130px;
+  }
+}
