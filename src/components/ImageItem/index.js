@@ -4,11 +4,18 @@ import {Component} from 'react'
 class ImageItem extends Component {
   onThumbnailClick = () => {
     console.log('--> In onThumbnailClick()')
-    const {imageDetails, activeImgId, updateScoreAndGetNextImg} = this.props
+    const {
+      imageDetails,
+      activeImgId,
+      updateScoreAndGetNextImg,
+      updateGameStatus,
+    } = this.props
     const {id} = imageDetails
 
     if (id === activeImgId) {
       updateScoreAndGetNextImg()
+    } else {
+      updateGameStatus()
     }
   }
 
