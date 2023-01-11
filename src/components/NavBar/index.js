@@ -6,7 +6,7 @@ class NavBar extends Component {
     const {score, seconds} = this.props
 
     return (
-      <div className="navbar">
+      <li className="navbar-inner-container">
         <img
           src="https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png"
           alt="website logo"
@@ -27,7 +27,7 @@ class NavBar extends Component {
             <p className="time-text">{seconds} sec</p>
           </div>
         </div>
-      </div>
+      </li>
     )
   }
 }
