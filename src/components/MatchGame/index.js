@@ -77,6 +77,10 @@ class Matchgame extends Component {
     }
   }
 
+  updateGameStatus = () => {
+    this.setState({isGameOver: true})
+  }
+
   startTimer() {
     console.log('==> In startTimer()')
     this.intervalId = setInterval(this.decrementElapsedseconds, 1000)
@@ -90,12 +94,17 @@ class Matchgame extends Component {
     const showGameOrScore = isGameOver ? (
       <ScoreCard score={score} restartGame={this.restartGame} />
     ) : (
-      <Game updateScore={this.updateScore} />
+      <Game
+        updateScore={this.updateScore}
+        updateGameStatus={this.updateGameStatus}
+      />
     )
 
     return (
       <div className="app-container">
-        <NavBar score={score} seconds={seconds} />
+        <ul className="navbar-container">
+          <NavBar score={score} seconds={seconds} />
+        </ul>
         <div className="main-container">{showGameOrScore}</div>
       </div>
     )
