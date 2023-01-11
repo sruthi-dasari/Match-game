@@ -17,7 +17,7 @@ class ScoreCard extends Component {
           alt="trophy"
           className="trophy-img"
         />
-        <h1 className="score-card-score-title">YOUR SCORE</h1>
+        <p className="score-card-score-title">YOUR SCORE</p>
         <p className="score-card-score-text">{score}</p>
         <div className="play-again-container">
           <img
