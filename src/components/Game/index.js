@@ -298,6 +298,7 @@ class Game extends Component {
     console.log('--> In Game render()')
 
     const {activeTabId, activeImgId} = this.state
+    const {updateGameStatus} = this.props
 
     // console.log(`seconds in Game: ${seconds}`)
 
@@ -332,6 +333,7 @@ class Game extends Component {
               key={imageDetails.id}
               activeImgId={activeImgId}
               updateScoreAndGetNextImg={this.updateScoreAndGetNextImg}
+              updateGameStatus={updateGameStatus}
             />
           ))}
         </ul>
